@@ -8,7 +8,7 @@ import cloudinary.uploader
 
 app = Flask(__name__)
 
-# 
+# 這裡就可以修改
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME", "dkiggmmuk"),
     api_key=os.getenv("CLOUDINARY_API_KEY", "218587589726551"),
@@ -96,6 +96,7 @@ def push_message():
         # 將完整錯誤顯示於 logs
         print("ERROR in /push:", repr(e))
         return jsonify({"ok": False, "error": str(e)}), 500
+
 
 
 
